@@ -14,7 +14,7 @@ public class Test {
     public static void main(String[] args) {
       
         User u = new User(1,"Shan","shan@gmail.com","123","Colombo");
-       
+        System.out.println(u);
     }
     
 }
@@ -33,9 +33,7 @@ class User{
         this.password = password;
         this.city = city;
     }
-    
-    
-    
+  
     /**
      * @return the id
      */
@@ -105,4 +103,15 @@ class User{
     public void setCity(String city) {
         this.city = city;
     }
+
+    @Override
+    public String toString() {
+      String output = "ID : " + getId() + " \n "
+              + " Name : " + getName() + " \n "
+              + " Email : " + getEmail() + " \n "
+              + " Password : " + getPassword()+ " \n "
+              + " City : " + getCity()+ "  ";
+        return output;
+    }
+    
 }
