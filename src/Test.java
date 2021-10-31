@@ -32,12 +32,12 @@ class User{
     private String password;
     private String city;
 
-    public User(int id, String name, String email, String password, String city) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.city = city;
+    public User(UserBuilder userBuilder) {
+        this.id = userBuilder.id;
+        this.name = userBuilder.name;
+        this.email = userBuilder.email;
+        this.password = userBuilder.password;
+        this.city = userBuilder.city;
     }
   
     /**
