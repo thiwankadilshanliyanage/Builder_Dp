@@ -16,7 +16,7 @@ public class Test {
 //        User u = new User(1,"Shan","shan@gmail.com","123","Colombo");
 //        System.out.println(u);
 
-        User.UserBuilder b = new User.UserBuilder();
+        User.Builder b = new User.Builder();
         b.setId(1);
         
         User u = b.build();
@@ -32,7 +32,7 @@ class User{
     private String password;
     private String city;
 
-    public User(UserBuilder userBuilder) {
+    public User(Builder userBuilder) {
         this.id = userBuilder.id;
         this.name = userBuilder.name;
         this.email = userBuilder.email;
@@ -120,7 +120,7 @@ class User{
         return output;
     }
     
-    static class UserBuilder{
+    static class Builder{
 
     private int id;
     private String name;
@@ -133,30 +133,30 @@ class User{
         return u;
     }
     
-    public UserBuilder setId(int id) {
+    public Builder setId(int id) {
         this.id = id;
         return this;
     }
 
    
-    public UserBuilder setName(String name) {
+    public Builder setName(String name) {
         this.name = name;
         return this;
     }
 
     
-    public UserBuilder setEmail(String email) {
+    public Builder setEmail(String email) {
         this.email = email;
         return this;
     }
 
-    public UserBuilder setPassword(String password) {
+    public Builder setPassword(String password) {
         this.password = password;
         return this;
     }
 
     
-    public UserBuilder setCity(String city) {
+    public Builder setCity(String city) {
         this.city = city;
         return this;
     }
