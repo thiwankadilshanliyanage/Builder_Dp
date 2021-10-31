@@ -129,31 +129,36 @@ class User{
     private String city;
     
     public User build(){
-        User u = new User(id, name, email, password, city);
+        User u = new User(this);
         return u;
     }
     
-    public User setId(int id) {
+    public UserBuilder setId(int id) {
         this.id = id;
+        return this;
     }
 
    
-    public User setName(String name) {
+    public UserBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
     
-    public User setEmail(String email) {
+    public UserBuilder setEmail(String email) {
         this.email = email;
+        return this;
     }
 
-    public User setPassword(String password) {
+    public UserBuilder setPassword(String password) {
         this.password = password;
+        return this;
     }
 
     
-    public User setCity(String city) {
+    public UserBuilder setCity(String city) {
         this.city = city;
+        return this;
     }
     
     
