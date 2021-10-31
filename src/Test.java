@@ -124,40 +124,30 @@ class UserBuilder{
     private String password;
     private String city;
     
-    public void build(){
+    public User build(){
         User u = new User(id, name, email, password, city);
+        return u;
     }
-    /**
-     * @param id the id to set
-     */
+    
     public User setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @param name the name to set
-     */
+   
     public User setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @param email the email to set
-     */
+    
     public User setEmail(String email) {
         this.email = email;
     }
 
-    /**
-     * @param password the password to set
-     */
     public User setPassword(String password) {
         this.password = password;
     }
 
-    /**
-     * @param city the city to set
-     */
+    
     public User setCity(String city) {
         this.city = city;
     }
