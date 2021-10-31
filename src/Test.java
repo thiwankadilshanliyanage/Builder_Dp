@@ -13,14 +13,12 @@ public class Test {
    
     public static void main(String[] args) {
       
-//        User u = new User(1,"Shan","shan@gmail.com","123","Colombo");
-//        System.out.println(u);
-
-        User.Builder b = new User.Builder();
-        b.setId(1);
+        User.Builder builder = new User.Builder();
+        builder.setId(1).setName("Shan").setEmail("shan@gmail.com").setPassword("123").setCity("Colombo");
         
-        User u = b.build();
-        System.out.println(u);
+        User user = builder.build();
+        System.out.println(user);
+        
     }
     
 }
