@@ -24,11 +24,11 @@ public class Test {
 }
 class User{
 
-    private int id;
-    private String name;
-    private String email;
-    private String password;
-    private String city;
+    private final int id;
+    private final String name;
+    private final String email;
+    private final String password;
+    private final String city;
 
     public User(Builder userBuilder) {
         this.id = userBuilder.id;
@@ -38,74 +38,25 @@ class User{
         this.city = userBuilder.city;
     }
   
-    /**
-     * @return the id
-     */
+   
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email the email to set
-     */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return the password
-     */
     public String getPassword() {
         return password;
     }
 
-    /**
-     * @param password the password to set
-     */
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    /**
-     * @return the city
-     */
     public String getCity() {
         return city;
-    }
-
-    /**
-     * @param city the city to set
-     */
-    public void setCity(String city) {
-        this.city = city;
     }
 
     @Override
@@ -125,6 +76,17 @@ class User{
     private String email;
     private String password;
     private String city;
+
+        public Builder(int id, String name) {
+            this.id = id;
+            this.name = name;
+        }
+
+        Builder() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    
+    
     
     public User build(){
         User u = new User(this);
