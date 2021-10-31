@@ -13,7 +13,13 @@ public class Test {
    
     public static void main(String[] args) {
       
-        User u = new User(1,"Shan","shan@gmail.com","123","Colombo");
+//        User u = new User(1,"Shan","shan@gmail.com","123","Colombo");
+//        System.out.println(u);
+
+        User.UserBuilder b = new User.UserBuilder();
+        b.setId(1);
+        
+        User u = b.build();
         System.out.println(u);
     }
     
@@ -114,9 +120,7 @@ class User{
         return output;
     }
     
-}
-
-class UserBuilder{
+    static class UserBuilder{
 
     private int id;
     private String name;
@@ -155,3 +159,7 @@ class UserBuilder{
     
     
 }
+    
+}
+
+ 
